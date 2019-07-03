@@ -1,198 +1,265 @@
-<!doctype html>
-<html>
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<title>HFNS聚合搜索</title>
+<link rel="stylesheet" href="css/main.css">
+<meta charset="utf-8"> 
+<meta name="baidu-site-verification" content="b9lOcChmbf"> 
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
+<link rel="shortcut icon" href="images/favicon.ico" /> 
 
-  <head>
-    <title>次元概念全网搜索导航</title>
-    <link rel="stylesheet" href="https://git.mrhao.xyz/css/main.css">
-    <meta name="description" content="HFNS 次元概念全网搜索导航">
-    <meta name="keywords" content="HFNS 次元概念全网搜索导航">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="format-detection" content="email=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta name="x5-fullscreen" content="true">
-    <meta name="x5-orientation" content="portrait">
-    <meta name="x5-page-mode" content="app">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=1000, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <!-- Set render engine for 360 browser -->
-    <meta name="renderer" content="webkit">
-    <!-- No Baidu Siteapp-->
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="stylesheet" type="text/css" href="http://cdn.h5ds.cn/static/css/h5ds.phone.4.5.0.css?t=1562124191802">
-    <link rel="stylesheet" type="text/css" href="http://cdn.h5ds.cn/static/css/h5ds.plus.4.5.0.css?t=1562124191802">
-    <link rel="stylesheet" type="text/css" href="http://cdn.h5ds.cn/lib/plugins/weui.min.css">
-    <!--js-->
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-    <script src="http://cdn.h5ds.cn/lib/plugins/jquery.min.js"></script>
-    <script src="http://cdn.h5ds.cn/lib/plugins/qrcode.min.js"></script>
-    <script src="http://cdn.h5ds.cn/lib/plugins/hammer.min.js"></script>
-    <script src="http://cdn.h5ds.cn/lib/plugins/weui.min.js"></script>
-    <script src="http://map.qq.com/api/js?v=2.exp&key=ZF5BZ-WGGCQ-4NK5V-GSBW3-Y6KHE-KLFJ6"></script>
-    <script src="http://cdn.h5ds.cn/lib/plugins/echarts.simple.min.js"></script>
-    <script>
-      var H5DS_SOURCE = ["http://h5ds-cdn.oss-cn-beijing.aliyuncs.com/upload/e05b47a7-1a2f-42c5-8ac1-264208706048.jpeg"];
-var H5DS_SLIDER_ANIMATE = {"name":"上下隐藏","inNext":"pt-page-moveFromBottomFade","outNext":"pt-page-moveToTopFade","inPrev":"pt-page-moveFromTopFade","outPrev":"pt-page-moveToBottomFade"};
-var H5DS_COLLECT_API = 'http://apis.h5ds.cn/h5ds/collect';
-</script>
-    <script src="http://cdn.h5ds.cn/static/js/h5ds.pc.4.5.0.js?t=1562124191802"></script>
-    <script src="http://cdn.h5ds.cn/static/js/h5ds.plus.4.5.0.js?t=1562124191802"></script>
-  </head>
+<noscript> 
+<link rel="stylesheet" href="css/noscript.css"/> 
+</noscript> 
+</head> 
+<body> 
+<div id="wrapper"> 
+<header id="header"> 
+<div class="content"> 
+<div class="inner"> 
+<h1>HFNS聚合搜索导航页</h1>
+</div> 
+</div> 
+<nav> 
+<script type="text/javascript"> 
+function duihua() 
+  { 
+    alert("Hao") 
+  } 
+  </script>
+  <style>
+  .google {
+    position: relative;
+    margin: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 25px;
+  }
+  .google .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: crimson;
+    border-radius: 100%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+  }
+  .google .search:hover {
+    cursor: pointer;
+  }
+  .google .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all .5s;
+  }
+  .google .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all .5s;
+  }
+  .google input {
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    text-shadow: 0 0 10px crimson;
+    padding: 0 80px 0 20px;
+    border-radius: 300px;
+    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+  }
+  .google input:hover {
+    cursor: pointer;
+  }
+  .google input:focus {
+    width: 150px;
+    opacity: 1;
+    cursor: text;
+  }
+  .google input:focus ~ .search {
+    right: -250px;
+    background: #151515;
+    z-index: 6;
+  }
+  .google input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 30px;
+  }
+  .google input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+  }
+  .google input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+  }
 
-  <body class="h5dsapp h5dsapp-pc">
-    <div class="h5ds-full" style="width:1000px;height:707px">
-      <div class="h5ds-video-icon"><i></i><i></i><i></i><i></i></div><audio style="display:none" id="h5dsBgMusic" loop="" preload="preload">
-        <source src="http://pic.ibaotu.com/00/23/30/17E888piCgGs.mp3" type="audio/mpeg" /></audio>
-      <div class="h5ds-loading" id="h5dsLoading">
-        <div class="h5ds-loadinner">
-          <div class="typing_loader"></div>
-          <div class="h5ds-progress" id="h5dsProgress"></div>
-        </div>
-      </div>
-      <div id="h5dsPopups"></div>
-      <div>
-        <div id="h5dsFixedsUp">
-          <div class="h5ds-swiper-page">
-            <div class="h5ds-swiper-pageinner">
-              <div class="h5ds-swiper-layers" style="height:0;width:1000px"></div>
-            </div>
-          </div>
-        </div>
-        <div id="h5dsFixedsDown">
-          <div class="h5ds-swiper-page">
-            <div class="h5ds-swiper-pageinner">
-              <div class="h5ds-swiper-layers" style="height:600px;width:1000px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="h5dsSwiper" class="h5ds-swiper">
-        <div class="h5ds-swiper-page" data-title="%u7A7A%u767D%u9875%u9762" data-desc="" data-autoplay="false" data-lock="false">
-          <div class="h5ds-swiper-pageinner" style="background-image:;background-repeat:no-repeat;background-color:rgb(255, 255, 255);background-size:initial">
-            <div class="h5ds-swiper-layers" style="height:707px;width:1000px">
-              <div data-adsorbent="{}" id="" data-keyid="5iojyg6bo1c000" data-last-animate="" data-uefun="{}" class="layer layer-dom" style="z-index:9999;width:306px;height:100px;top:300px;left:350px">
-                <div class="element" id="" style="-webkit-animation:;animation:;border:0px solid rgb(0, 0, 0)">
-                  <div class="dom-inner">
-                    <div>
-                      <style>
-                        .container {
-  position: absolute;
-  margin: top;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-  height: 100px;
-}
-.container .search {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  background: crimson;
-  border-radius: 100%;
-  transition: all 1s;
-  z-index: 4;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-}
-.container .search:hover {
-  cursor: pointer;
-}
-.container .search::before {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: 25px;
-  right: 0;
-  bottom: 0;
-  left: 22px;
-  width: 12px;
-  height: 2px;
-  background: white;
-  transform: rotate(45deg);
-  transition: all .5s;
-}
-.container .search::after {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: -5px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: all .5s;
-}
-.container input {
-  font-family: 'Inconsolata', monospace;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  background: crimson;
-  color: white;
-  text-shadow: 0 0 10px crimson;
-  padding: 0 80px 0 20px;
-  border-radius: 300px;
-  box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-  transition: all 1s;
-  opacity: 0;
-  z-index: 5;
-  font-weight: bolder;
-  letter-spacing: 0.1em;
-}
-.container input:hover {
-  cursor: pointer;
-}
-.container input:focus {
-  width: 300px;
-  opacity: 1;
-  cursor: text;
-}
-.container input:focus ~ .search {
-  right: -250px;
-  background: #151515;
-  z-index: 6;
-}
-.container input:focus ~ .search::before {
-  top: 0;
-  left: 0;
-  width: 30px;
-}
-.container input:focus ~ .search::after {
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 2px;
-  border: none;
-  background: white;
-  border-radius: 0%;
-  transform: rotate(-45deg);
-}
-.container input::placeholder {
-  color: white;
-  opacity: 0.5;
-  font-weight: bolder;
-}
+  </style>
+  <style>
+  .container {
+    position: relative;
+    margin: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 25px;
+  }
+  .container .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: crimson;
+    border-radius: 100%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+  }
+  .container .search:hover {
+    cursor: pointer;
+  }
+  .container .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all .5s;
+  }
+  .container .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all .5s;
+  }
+  .container input {
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    text-shadow: 0 0 10px crimson;
+    padding: 0 80px 0 20px;
+    border-radius: 300px;
+    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+  }
+  .container input:hover {
+    cursor: pointer;
+  }
+  .container input:focus {
+    width: 150px;
+    opacity: 1;
+    cursor: text;
+  }
+  .container input:focus ~ .search {
+    right: -250px;
+    background: #151515;
+    z-index: 6;
+  }
+  .container input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 30px;
+  }
+  .container input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+  }
+  .container input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+  }
 
-</style>
+  </style> 
+  <div> 
 
 
 
@@ -200,30 +267,42 @@ var H5DS_COLLECT_API = 'http://apis.h5ds.cn/h5ds/collect';
   </body>
 
   <body>
-    <div class="container">
-      <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
-        <input id="input_baidu" type="text" onfocus="checkHttps" name="word" size="30">
-        <div class="search"></div>
-      </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div data-adsorbent="{}" id="" data-keyid="kpxwhdyensw00" data-last-animate="" data-uefun="{}" class="layer layer-img" style="z-index:9998;top:0;left:0">
-      <div class="element" id="" style="-webkit-animation:;animation:"><img src="http://h5ds-cdn.oss-cn-beijing.aliyuncs.com/upload/e05b47a7-1a2f-42c5-8ac1-264208706048.jpeg" /></div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="h5ds-last-page" style="animation:slideInUp 0.5s ease 0s 1 normal forwards running;opacity:0">
-      <div class="h5ds-last-info"><img style="width:100%;" src="http://cdn.h5ds.cn/static/images/img-null.png" alt="" />
-        <h1></h1
-        <p>HFNS，作者网站git.mrhao.xyz</p>
-        
-      <div class="h5ds-last-power">Powered by <a href="https://git.mrhao.xyz">Mrhao</a></div>
-    </div>
-    </div>
-  </body>
+  <div class="container">
+  <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+  <input id="input_baidu" type="text" onfocus="checkHttps" name="word" size="30">
+  <div class="search"></div>
+  </form>
+  </div>
 
-</html>
+  <div class="google">
+  <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+  <input id="input_baidu" type="text" onfocus="checkHttps" name="word" size="30">
+  <div class="search"></div>
+  </form>
+  </div>
+  </div>
+
+
+  </nav></header>
+  <div>
+  </div>
+  <footer id="footer">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> 
+  <p class="copyright">HFNS，作者网站<a href="git.mrhao.xyz">git.mrhao.xyz</p>
+  <p class="copyright">Powered by <a href="https://git.mrhao.xyz">Mrhao</a></p>
+  <p class="copyright">© 2019 Mr.hao</p><!-- 版权--> 
+  </footer> 
+  </div> 
+  <div id="bg"> 
+  </div> 
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/skel.min.js"></script> 
+  <script src="js/util.js"></script> 
+  <script src="js/main.js"></script> 
+  <script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};</script> 
+            <audio autoplay> 
+            <source src="" type="audio/mpeg"><!-- ！BGM！--> 
+            </audio> 
+            </body> 
+            </html>
