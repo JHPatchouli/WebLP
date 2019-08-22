@@ -1,0 +1,121 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+        }
+
+        #MainCT {
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 500px;
+        }
+
+        .item {
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .item > div {
+                height: 0px;
+                overflow: hidden;
+            }
+
+        .itemTitle {
+            width: 200px;
+            line-height: 25px;
+            background-color: #efefef;
+        }
+
+        .item li {
+            list-style: none;
+            line-height: 30px;
+        }
+
+        .currentItem > div {
+            height: 160px;
+        }
+
+        #beian {
+            text-align: center;
+            float: left;
+            width: 100%;
+            margin-top: 50px
+        }
+
+            #beian a {
+                color: gray;
+                font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+            }
+    </style>
+
+
+    <title>html抽屉</title>
+</head>
+
+<body>
+    <div id="MainCT">
+        <div class="item currentItem">
+            <p class="itemTitle">item1</p>
+            <div style="height: 0px;">
+                <li>item1child1</li>
+                <li>item1child2</li>
+                <li>item1child3</li>
+                <li>item1child4</li>
+                <li>item1child5</li>
+            </div>
+        </div>
+        <div class="item" style="margin-top:-25px;">
+            <p class="itemTitle">item2</p>
+            <div style="height: 0px;">
+                <li>item2child1</li>
+                <li>item2child2</li>
+                <li>item2child3</li>
+                <li>item2child4</li>
+                <li>item2child5</li>
+            </div>
+        </div>
+        <div class="item" style="margin-top:-25px;">
+            <p class="itemTitle">item3</p>
+            <div style="height: 160px;">
+                <li>item3child1</li>
+                <li>item3child2</li>
+                <li>item3child3</li>
+                <li>item3child4</li>
+                <li>item3child5</li>
+            </div>
+        </div>
+        <div class="item" style="margin-top:-25px;">
+            <p class="itemTitle">item4</p>
+            <div style="height: 0px;">
+                <li>item4child1</li>
+                <li>item4child2</li>
+                <li>item4child3</li>
+                <li>item4child4</li>
+                <li>item4child5</li>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://static.pengyaou.com/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        var isMoving = false;
+        $(document).ready(function (e) {
+            $(".item").click(function () {
+                if (isMoving == true)
+                    return;
+                isMoving = true;
+                var target = $(this);
+                $(".item").find("div").animate({ height: "0px" }, 300, function () {
+                    $(target).find("div").animate({ height: "160px" }, 300, function () { isMoving = false; });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,308 +1,163 @@
 ﻿<!DOCTYPE HTML> 
 <html> 
-<head> 
-<title>HFNS聚合搜索</title>
-<link rel="stylesheet" href="css/main.css">
-<meta charset="utf-8"> 
-<meta name="baidu-site-verification" content="b9lOcChmbf"> 
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
-<link rel="shortcut icon" href="images/favicon.ico" /> 
+<head>
+    <title>HFNS导航页</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="b9lOcChmbf">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <style type="text/css">
+        body {
+            font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+        }
 
-<noscript> 
-<link rel="stylesheet" href="css/noscript.css"/> 
-</noscript> 
+        #MainCT {
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 500px;
+        }
+
+        .item {
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .item > div {
+                height: 0px;
+                overflow:hidden;
+            }
+
+        .itemTitle {
+            width: 200px;
+            line-height: 10px;
+            background-color: rgba(0, 0, 0, 0.00);
+        }
+
+        .item li {
+            list-style: none;
+            line-height: 30px;
+        }
+
+        .currentItem > div {
+            height: 320px;
+        }
+
+        #beian {
+            text-align: center;
+            float: left;
+            width: 100%;
+            margin-top: 300px
+        }
+
+            #beian a {
+                color: gray;
+                font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+            }
+    </style>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <noscript>
+        <link rel="stylesheet" href="css/noscript.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </noscript>
 </head> 
-<body> 
-<div id="wrapper"> 
-<header id="header"> 
-<div class="content"> 
-<div class="inner"> 
-<h1>HFNS聚合搜索导航页</h1>
-</div> 
-</div> 
-<nav> 
-<script type="text/javascript"> 
-function duihua() 
-  { 
-    alert("Hao") 
-  } 
-  </script>
-  <style>
-  .google {
-    position: relative;
-    margin: top;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 200px;
-    height: 25px;
-  }
-  .google .search {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background: crimson;
-    border-radius: 100%;
-    transition: all 1s;
-    z-index: 4;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-  }
-  .google .search:hover {
-    cursor: pointer;
-  }
-  .google .search::before {
-    content: "";
-    position: absolute;
-    margin: auto;
-    top: 25px;
-    right: 0;
-    bottom: 0;
-    left: 22px;
-    width: 12px;
-    height: 2px;
-    background: white;
-    transform: rotate(45deg);
-    transition: all .5s;
-  }
-  .google .search::after {
-    content: "";
-    position: absolute;
-    margin: auto;
-    top: -5px;
-    right: 0;
-    bottom: 0;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid white;
-    transition: all .5s;
-  }
-  .google input {
-    font-family: 'Inconsolata', monospace;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    outline: none;
-    border: none;
-    background: crimson;
-    color: white;
-    text-shadow: 0 0 10px crimson;
-    padding: 0 80px 0 20px;
-    border-radius: 300px;
-    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    transition: all 1s;
-    opacity: 0;
-    z-index: 5;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-  }
-  .google input:hover {
-    cursor: pointer;
-  }
-  .google input:focus {
-    width: 150px;
-    opacity: 1;
-    cursor: text;
-  }
-  .google input:focus ~ .search {
-    right: -250px;
-    background: #151515;
-    z-index: 6;
-  }
-  .google input:focus ~ .search::before {
-    top: 0;
-    left: 0;
-    width: 30px;
-  }
-  .google input:focus ~ .search::after {
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 2px;
-    border: none;
-    background: white;
-    border-radius: 0%;
-    transform: rotate(-45deg);
-  }
-  .google input::placeholder {
-    color: white;
-    opacity: 0.5;
-    font-weight: bolder;
-  }
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="logo">
+                <a href="https://jq.qq.com/?_wv=1027&k=5vfwtdd"><img src="http://q.qlogo.cn/headimg_dl?dst_uin=2859676251&spec=640" class="logo"> </a>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>HFNSの服务导航页</h1>
+                    <p>
+                        浪迹web行的咸鱼在校生<br>
+                        一杯茶，一支烟，一个bug改一天
+                    </p>
+                </div>
+            </div>
+               <nav>
+                <ul>
+                   <div class="item currentItem">
+                       <li>百度</li>
+                       <div style="height: 0px;">
+                         <li>网页</li>
+                         <li>资讯</li>
+                         <li>视频</li>
+                         <li>图片</li>
+                         <li>知道</li>
+                         <li>文库</li>
+                         <li>贴吧</li>
+                         <li>采购</li>
+                         <li>地图</li>
+                         <li>百度学术</li>
+                       </div>
+                   </div>
+                   <div class="item" style="margin-top:0px;">
+                       <li>谷歌</li>
+                       <div style="height: 0px;">
+                           <li>网页</li>
+                           <li>资讯</li>
+                           <li>视频</li>
+                           <li>图片</li>
+                           <li>知道</li>
+                           <li>文库</li>
+                           <li>贴吧</li>
+                           <li>采购</li>
+                           <li>地图</li>
+                           <li>百度学术</li>
+                       </div>
+                   </div>
+                   
+                </ul>
+               </nav>
+                <script type="text/javascript">
 
-  </style>
-  <style>
-  .container {
-    position: relative;
-    margin: top;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 200px;
-    height: 25px;
-  }
-  .container .search {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background: crimson;
-    border-radius: 100%;
-    transition: all 1s;
-    z-index: 4;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-  }
-  .container .search:hover {
-    cursor: pointer;
-  }
-  .container .search::before {
-    content: "";
-    position: absolute;
-    margin: auto;
-    top: 25px;
-    right: 0;
-    bottom: 0;
-    left: 22px;
-    width: 12px;
-    height: 2px;
-    background: white;
-    transform: rotate(45deg);
-    transition: all .5s;
-  }
-  .container .search::after {
-    content: "";
-    position: absolute;
-    margin: auto;
-    top: -5px;
-    right: 0;
-    bottom: 0;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid white;
-    transition: all .5s;
-  }
-  .container input {
-    font-family: 'Inconsolata', monospace;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    outline: none;
-    border: none;
-    background: crimson;
-    color: white;
-    text-shadow: 0 0 10px crimson;
-    padding: 0 80px 0 20px;
-    border-radius: 300px;
-    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    transition: all 1s;
-    opacity: 0;
-    z-index: 5;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-  }
-  .container input:hover {
-    cursor: pointer;
-  }
-  .container input:focus {
-    width: 150px;
-    opacity: 1;
-    cursor: text;
-  }
-  .container input:focus ~ .search {
-    right: -250px;
-    background: #151515;
-    z-index: 6;
-  }
-  .container input:focus ~ .search::before {
-    top: 0;
-    left: 0;
-    width: 30px;
-  }
-  .container input:focus ~ .search::after {
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 2px;
-    border: none;
-    background: white;
-    border-radius: 0%;
-    transform: rotate(-45deg);
-  }
-  .container input::placeholder {
-    color: white;
-    opacity: 0.5;
-    font-weight: bolder;
-  }
-
-  </style> 
-  <div> 
+                </script>
 
 
 
-
-  </body>
-
-  <body>
-  <div class="container">
-  <form  action="http://www.baidu.com/baidu" target="_blank">
-  <input placeholder="百度" id="input_baidu" type="text"  name="word" size="30">
-  <div class="search"></div>
-  </form>
-  </div>
-
-  <div class="google">
-  <form id="search_form" action="https://www.google.com/search" method="GET" target="_blank">
-  <input placeholder="谷歌" id="input_google" type="text"  name="q" size="30">
-  <div class="search"></div>
-  </form>
-  </div>
-  </div>
-
-
-  </nav></header>
-  <div>
-  </div>
-  <footer id="footer">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> 
-  <p class="copyright">HFNS，作者网站<a href="https://git.mrhao.xyz">git.mrhao.xyz</p>
-  <p class="copyright">Powered by <a href="https://git.mrhao.xyz">Mrhao</a></p>
-  <p class="copyright">© 2019 Mr.hao</p><!-- 版权--> 
-  </footer> 
-  </div> 
-  <div id="bg"> 
-  </div> 
-  <script src="js/jquery.min.js"></script> 
-  <script src="js/skel.min.js"></script> 
-  <script src="js/util.js"></script> 
-  <script src="js/main.js"></script> 
-  <script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};</script> 
-            <audio autoplay> 
-            <source src="" type="audio/mpeg"><!-- ！BGM！--> 
-            </audio> 
-            </body> 
-            </html>
+            
+        </header>
+    
+            </div>
+       
+    
+        <footer id="footer">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            <p class="copyright">© 2019 Mr.hao</p><!-- 版权-->
+        </footer>
+    
+    <div id="bg">
+    </div>
+    <script src="https://static.pengyaou.com/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        var isMoving = false;
+        $(document).ready(function (e) {
+            $(".item").click(function () {
+                if (isMoving == true)
+                    return;
+                isMoving = true;
+                var target = $(this);
+                $(".item").find("div").animate({ height: "0px" }, 300, function () {
+                    $(target).find("div").animate({ height: "300px" }, 300, function () { isMoving = false; });
+                });
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">document.oncontextmenu = function (t) { window.event && (t = window.event); try { var e = t.srcElement; return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1 } catch (n) { return !1 } }, document.onpaste = function (t) { window.event && (t = window.event); try { var e = t.srcElement; return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1 } catch (n) { return !1 } }, document.oncopy = function (t) { window.event && (t = window.event); try { var e = t.srcElement; return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1 } catch (n) { return !1 } }, document.oncut = function (t) { window.event && (t = window.event); try { var e = t.srcElement; return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1 } catch (n) { return !1 } }, document.onselectstart = function (t) { window.event && (t = window.event); try { var e = t.srcElement; return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1 } catch (n) { return !1 } };</script>
+    <audio autoplay>
+        <source src="" type="audio/mpeg"><!-- ！BGM！-->
+    </audio>
+</body> 
+</html>
