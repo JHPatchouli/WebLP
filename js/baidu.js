@@ -11,5 +11,8 @@
                 $(".bingitem").find("div").animate({ height: "0px" }, 300, function () {
                     $(target).find("div").animate({ height: "315px" }, 300, function () { isMoving = false; });
                 });
+                $(".sogouitem").find("div").animate({ height: "0px" }, 300, function () {
+                    $(target).find("div").animate({ height: "315px" }, 300, function () { isMoving = false; });
+                });
             });
         });

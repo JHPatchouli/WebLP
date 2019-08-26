@@ -8,5 +8,11 @@ $(document).ready(function (e) {
         $(".item").find("div").animate({ height: "0px" }, 300, function () {
             $(target).find("div").animate({ height: "275px" }, 300, function () { isMoving = false; });
         });
+        $(".bingitem").find("div").animate({ height: "0px" }, 300, function () {
+            $(target).find("div").animate({ height: "275px" }, 300, function () { isMoving = false; });
+        });
+        $(".sogouitem").find("div").animate({ height: "0px" }, 300, function () {
+            $(target).find("div").animate({ height: "275px" }, 300, function () { isMoving = false; });
+        });
     });
 });

@@ -5,7 +5,13 @@ $(document).ready(function (e) {
             return;
         isMoving = true;
         var target = $(this);
-        $(".bingitem").find("div").animate({ height: "0px" }, 300, function () {
+        $(".item").find("div").animate({ height: "0px" }, 300, function () {
+            $(target).find("div").animate({ height: "375px" }, 300, function () { isMoving = false; });
+        });
+        $(".googleitem").find("div").animate({ height: "0px" }, 300, function () {
+            $(target).find("div").animate({ height: "375px" }, 300, function () { isMoving = false; });
+        });
+        $(".sogouitem").find("div").animate({ height: "0px" }, 300, function () {
             $(target).find("div").animate({ height: "375px" }, 300, function () { isMoving = false; });
         });
     });
