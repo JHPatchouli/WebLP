@@ -6,13 +6,13 @@ $(document).ready(function (e) {
         isMoving = true;
         var target = $(this);
         $(".item").find("div").animate({ height: "0px" }, 300, function () {
-            $(target).find("div").animate({ height: "375px" }, 300, function () { isMoving = false; });
+            $(target).find("div").animate({ height: "370px" }, 300, function () { isMoving = false; });
         });
         $(".googleitem").find("div").animate({ height: "0px" }, 300, function () {
-            $(target).find("div").animate({ height: "375px" }, 300, function () { isMoving = false; });
+            $(target).find("div").animate({ height: "370px" }, 300, function () { isMoving = false; });
         });
         $(".sogouitem").find("div").animate({ height: "0px" }, 300, function () {
-            $(target).find("div").animate({ height: "375px" }, 300, function () { isMoving = false; });
+            $(target).find("div").animate({ height: "370px" }, 300, function () { isMoving = false; });
         });
     });
 });
